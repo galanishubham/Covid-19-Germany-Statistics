@@ -1,0 +1,21 @@
+.table-data {
+  .table-data-header {
+    text-align: center;
+  }
+  .table-data-dropdown {
+    margin-top: 20px;
+    select {
+      margin-right: 5px;
+      padding: 2px;
+      border-radius: 4px;
+    }
+  }
+  .table-data-container {
+    width: 700px;
+    .table-data-row__center {
+      text-align: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+  }
+}

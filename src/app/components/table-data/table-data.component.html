@@ -1,0 +1,28 @@
+<div class="table-data">
+  <div class="table-data-dropdown">
+    <select
+      class="custom-select"
+      (change)="changeDuration($event.target.value)"
+    >
+      <option
+        *ngFor="let duration of durations"
+        [value]="duration.day"
+        [selected]="duration.day"
+      >
+        {{ duration.value }}
+      </option>
+    </select>
+    <select class="custom-select" (change)="changeRegion($event.target.value)">
+      <option value="all" selected>{{ "Germany (All Regions)" }}</option>
+      <option
+        *ngFor="let region of (regionData | async).regions"
+        [value]="region.abbreviation"
+      >
+        {{ region.name }}
+      </option>
+    </select>
+  </div>
+
+  <app-table [TableData]="sendTableData()"></app-table>
+  <app-graph-data [ChartData]="sendGraphData()"></app-graph-data>
+</div>

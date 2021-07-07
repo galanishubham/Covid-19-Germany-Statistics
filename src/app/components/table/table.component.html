@@ -1,0 +1,42 @@
+<div class="table-data-container">
+  <div class="row table-data-row__header">
+    <div class="col-sm table-data-col__header">Date</div>
+    <div class="col-sm table-data-col__header">Cases</div>
+    <div class="col-sm table-data-col__header">Deaths</div>
+    <div class="col-sm table-data-col__header">Recovered</div>
+  </div>
+  <div class="row table-data-row">
+    <div class="col-sm table-data-col">
+      <div
+        class="row table-data-row__center"
+        *ngFor="let date of (TableData | async).cases"
+      >
+        {{ date.date | date: "longDate" }}
+      </div>
+    </div>
+    <div class="col-sm table-data-col">
+      <div
+        class="row table-data-row__center"
+        *ngFor="let case of (TableData | async).cases"
+      >
+        {{ case.cases }}
+      </div>
+    </div>
+    <div class="col-sm table-data-col">
+      <div
+        class="row table-data-row__center"
+        *ngFor="let death of (TableData | async).deaths"
+      >
+        {{ death.deaths }}
+      </div>
+    </div>
+    <div class="col-sm table-data-col">
+      <div
+        class="row table-data-row__center"
+        *ngFor="let recover of (TableData | async).recovered"
+      >
+        {{ recover.recovered }}
+      </div>
+    </div>
+  </div>
+</div>

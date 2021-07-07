@@ -1,0 +1,30 @@
+.table-data-container {
+  .table-data-col {
+    padding: 0;
+
+    &__header {
+      padding: 5px 0;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+  .table-data-row {
+    margin: 0;
+
+    &__header {
+      text-align: center;
+      justify-content: center;
+      margin: 10px 0 0;
+      background: #e4e6eb;
+      height: 35px;
+    }
+
+    &__center {
+      text-align: center;
+      justify-content: center;
+      margin: 10px 0;
+      border-bottom: 1px solid;
+      height: 35px;
+    }
+  }
+}
