@@ -2,26 +2,74 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
 
-## Development server
+It is a small web application developed using Angular which shows COVID-19 cases of Germany. You can also see cases accourding to region and for time period.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## File Structure
+```
+corona-statistics
+├── src
+|   ├── assets
+|   ├──  index.html
+|   ├──  main.js
+|   └──  app
+│        ├── components
+|        |   ├── graph-data
+|        |   |   ├── graph-data.component.ts
+|        |   |   ├── graph-data.component.html
+|        |   |   └── graph-data.scss
+|        |   ├── table-data
+|        |   |   ├── table-data.component.ts
+|        |   |   ├── table-data.component.html
+|        |   |   └── table-data.scss
+|        |   └── table
+|        |        ├── table.component.ts
+|        |        ├── table.component.html
+|        |        └── table.scss
+|        |
+|        ├── services
+| 		 |	 ├── country
+|        |   |   └── country.service.ts
+| 		 |	 └── region
+|        |       └── region.service.ts
+|        |
+|        ├── store
+|        |   ├── country
+|        |   |   ├── country.actions.ts
+| 		 |	 |   ├── country.effects.ts
+|        |   |   └── country.reducer.ts
+|		 |	 ├── region
+|        |   |   ├── region.actions.ts
+| 		 |	 |   ├── region.effects.ts
+|        |   |   └── region.reducer.ts
+|		 |	 └── app.reducer.ts
+|        |
+|        ├── app.component.ts
+|        ├── app.component.html
+|        ├── app.component.scss
+|        ├── app.module
+|        └── helper.ts
+|
+├── package-lock.json
+└── package.json
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Components Details
 
-## Build
+1. **Table-Data**,  It has main data logic for country and region
+2. **Graph-Data**, Graphical representation of table-data
+3. **Table**, Reusable table
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Installation
 
-## Running unit tests
+Use the package manager [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install Corona Statistics Application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+git clone https://github.com/galanishubham/Covid-19-Germany-Statistics.git
+cd corona-statistics
+npm install
+npm run serve
+```
+Now, you can view the project on your local device.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Thank You !!
